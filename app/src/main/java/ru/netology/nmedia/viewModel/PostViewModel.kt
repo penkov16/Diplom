@@ -1,5 +1,7 @@
 package ru.netology.nmedia.viewModel
 
+
+
 import android.annotation.SuppressLint
 import android.net.Uri
 import android.util.Log
@@ -111,6 +113,7 @@ class PostViewModel @Inject constructor(
             }
             _postCreated.postValue(Unit)
             _dataState.value = FeedModelState()
+
         } catch (e: Exception) {
             _dataState.value = FeedModelState(error = false, actionType = ActionType.NULL)
         } finally {
